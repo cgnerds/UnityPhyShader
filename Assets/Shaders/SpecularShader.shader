@@ -66,7 +66,7 @@
 				float4 tex = tex2D(_DiffuseTex, i.uv);
 
 				// Diffuse implementation (Lambert)
-				float nl = max(_Ambient, dot(normalDirection, _WorldSpaceLightPos0.xyz));
+				float nl = max(_Ambient, dot(normalDirection, lightDirection));
 				float4 diffuseTerm = nl * _Color * tex * _LightColor0;
 
 				// Specular implementation (Phong)
