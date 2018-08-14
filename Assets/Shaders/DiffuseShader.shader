@@ -1,9 +1,10 @@
-﻿Shader "Custom/Diffuse"
+﻿Shader "Custom/LambertDiffuse"
 {
 	Properties
 	{
 		_DiffuseTex("Texture", 2D) = "white"{}
 		_Color("Color", Color) = (1, 0, 0, 1)
+		_Ambient("Ambient", Range(0,1)) = 0.25
 	}
 
 	SubShader
@@ -38,6 +39,7 @@
             sampler2D _DiffuseTex;
 			float4 _DiffuseTex_ST;
 			float4 _Color;
+			float _Ambient;
 
 			v2f vert (appdata v)
 			{
@@ -53,7 +55,7 @@
 			{
 				float3 normalDirection = normalize(i.worldNormal);
 				float4 tex = tex2D(_DiffuseTex, i.uv);
-				float nl = max(0.0, dot(normalDirection, _WorldSpaceLightPos0.xyz));
+				float nl = max(_Ambient, dot(normalDirection, _WorldSpaceLightPos0.xyz));
 				float4 diffuseTerm = nl * _Color * tex * _LightColor0;
 
 				return diffuseTerm;
