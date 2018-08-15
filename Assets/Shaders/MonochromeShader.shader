@@ -1,4 +1,4 @@
-﻿Shader "Unlit/Monochrome"
+﻿Shader "Custom/Monochrome"
 {
 	Properties
 	{
