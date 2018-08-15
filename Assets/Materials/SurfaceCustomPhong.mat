@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SurfaceBlinnPhong
-  m_Shader: {fileID: 4800000, guid: 842304dd07fac48f8abf81d5cfd2c604, type: 3}
+  m_Name: SurfaceCustomPhong
+  m_Shader: {fileID: 4800000, guid: d571ec65a91d94ef881e6967834ed545, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -66,7 +66,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Shininess: 1
+    - _Shininess: 85.35001
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
