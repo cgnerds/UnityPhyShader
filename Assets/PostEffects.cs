@@ -49,22 +49,19 @@ public class PostEffects : MonoBehaviour {
 	{
 		if(curShader != null)
 		{
-			Graphics.Blit(sourceTexture, destTexture, material, 0);
 			if(InvertEffect) {
 		        Graphics.Blit(sourceTexture, destTexture, material, 0);
 			} else if(DepthEffect) {
 		        Graphics.Blit(sourceTexture, destTexture, material, 1);
+			} else if(LinearInvertEffect) {
+		        Graphics.Blit(sourceTexture, destTexture, material, 2);
+			} else if(ToneMappingEffect){
+				material.SetFloat("_ToneMapperExposure", ToneMapperExposure);
+		        Graphics.Blit(sourceTexture, destTexture, material, 3);
+			} else {
+		        Graphics.Blit(sourceTexture, destTexture);
 			}
 		}
-		// } else if(DepthEffect) {
-		// } else if(LinearInvertEffect) {
-		// 	Graphics.Blit(sourceTexture, destTexture, material, 2);
-		// } else if(ToneMappingEffect) {
-		// 	material.SetFloat("_ToneMapperExposure", ToneMapperExposure);
-		// 	Graphics.Blit(sourceTexture, destTexture, material, 3);
-		// } else {
-		// 	Graphics.Blit(sourceTexture, destTexture);
-		// }
 	}
 	
 	// Update is called once per frame

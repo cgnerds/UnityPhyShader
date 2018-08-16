@@ -260,10 +260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d73b4ea43004dc986fbdff60c1bc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curShader: {fileID: 4800000, guid: c11c40816dd5743549a0cf863be07052, type: 3}
+  curShader: {fileID: 4800000, guid: a47603ee13ee84ebd8e2a9cad76ff66a, type: 3}
   ToneMapperExposure: 1
   InvertEffect: 0
-  DepthEffect: 1
+  DepthEffect: 0
   LinearInvertEffect: 0
   ToneMappingEffect: 0
 --- !u!1 &1420303793
