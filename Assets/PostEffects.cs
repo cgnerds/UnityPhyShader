@@ -50,9 +50,13 @@ public class PostEffects : MonoBehaviour {
 		if(curShader != null)
 		{
 			Graphics.Blit(sourceTexture, destTexture, material, 0);
+			if(InvertEffect) {
+		        Graphics.Blit(sourceTexture, destTexture, material, 0);
+			} else if(DepthEffect) {
+		        Graphics.Blit(sourceTexture, destTexture, material, 1);
+			}
 		}
 		// } else if(DepthEffect) {
-		// 	Graphics.Blit(sourceTexture, destTexture, material, 1);
 		// } else if(LinearInvertEffect) {
 		// 	Graphics.Blit(sourceTexture, destTexture, material, 2);
 		// } else if(ToneMappingEffect) {
