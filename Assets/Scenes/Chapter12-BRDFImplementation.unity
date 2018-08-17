@@ -155,7 +155,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 27d79812a265c4b38b6ffe14f0d2e195, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: eaee1007d31b3475281d9204350c7f06, type: 2}
+      objectReference: {fileID: 2100000, guid: 51e533f616f73469da2e2c77fab1e962, type: 2}
     - target: {fileID: 400000, guid: 27d79812a265c4b38b6ffe14f0d2e195, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -265,7 +265,7 @@ MonoBehaviour:
   InvertEffect: 0
   DepthEffect: 0
   LinearInvertEffect: 0
-  ToneMappingEffect: 0
+  ToneMappingEffect: 1
 --- !u!1 &1420303793
 GameObject:
   m_ObjectHideFlags: 0
