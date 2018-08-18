@@ -352,5 +352,5 @@ Shader "Custom/CustomStandard"
 
 
     FallBack "VertexLit"
-    CustomEditor "StandardShaderGUI"
+    CustomEditor "CustomShaderGUI"
 }
